@@ -1,66 +1,9 @@
-## Foundry
+Inspired by Sridhar Vembu’s call to restore trust in global trade with real assets like gold, I created sGOLD — a synthetic gold token powered by Ethereum. It’s a step toward decentralizing value, bringing gold on-chain, and contributing to a more resilient, asset-backed digital financial system.
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Currently, the value of sGOLD and its ETH collateral are both calculated in USD, as that remains the global reference standard for commodities and crypto markets. But this raises a deeper question: can we tokenize and trade gold without relying on fiat currencies at all? Is it possible to build a system where value is anchored in real-world assets but free from fiat valuation?
 
-Foundry consists of:
+Also, a thought experiment — if we were to custody actual gold to directly back sGOLD, would that make the system inherently centralized? Perhaps yes. It’s a compromise between decentralization and real-world asset integration. I know it's not practically feasible in a decentralized setup, but the tension between trustless systems and physical asset custody is worth thinking about.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+On the technical side, I’ve just implemented the collateral ratio and health factor mechanisms to ensure responsible minting and maintain system integrity. In future commits, I’ll be introducing liquidation logic to manage undercollateralized positions and further strengthen the protocol.
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This is just the beginning. If you’re working on tokenized real-world assets, synthetic commodities, or exploring gold-backed DeFi, let’s connect — I’d love to collaborate or exchange ideas.
