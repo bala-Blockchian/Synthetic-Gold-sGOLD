@@ -41,4 +41,3 @@ library OracleLib {
         return TIMEOUT;
     }
 }
-

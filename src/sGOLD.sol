@@ -4,7 +4,6 @@ pragma solidity ^0.8.13;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {OracleLib, AggregatorV3Interface} from "./libraries/OracleLib.sol";
 
-
 /*
  * @title sGOLD - Synthetic Gold Token with ETH Collateralization
  * @author Balamurugan Nagarajan
