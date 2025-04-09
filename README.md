@@ -1,9 +1,29 @@
-Inspired by Sridhar Vembu’s call to restore trust in global trade with real assets like gold, I created sGOLD — a synthetic gold token powered by Ethereum. It’s a step toward decentralizing value, bringing gold on-chain, and contributing to a more resilient, asset-backed digital financial system.
+## Overview
 
-Currently, the value of sGOLD and its ETH collateral are both calculated in USD, as that remains the global reference standard for commodities and crypto markets. But this raises a deeper question: can we tokenize and trade gold without relying on fiat currencies at all? Is it possible to build a system where value is anchored in real-world assets but free from fiat valuation?
+sGOLD is an ERC20-compatible synthetic asset pegged to the price of gold. Users deposit ETH as collateral to mint sGOLD tokens. The protocol uses Chainlink price feeds to determine asset values and implements collateral management logic to ensure responsible issuance.
 
-Also, a thought experiment — if we were to custody actual gold to directly back sGOLD, would that make the system inherently centralized? Perhaps yes. It’s a compromise between decentralization and real-world asset integration. I know it's not practically feasible in a decentralized setup, but the tension between trustless systems and physical asset custody is worth thinking about.
+## Features
 
-On the technical side, I’ve just implemented the collateral ratio and health factor mechanisms to ensure responsible minting and maintain system integrity. In future commits, I’ll be introducing liquidation logic to manage undercollateralized positions and further strengthen the protocol.
+- Synthetic gold token minting using ETH as collateral
+- Oracle-based pricing via Chainlink (ETH/USD and XAU/USD)
+- Collateral ratio enforcement
+- Health factor calculations for risk management
+- Liquidation mechanism (in progress)
 
-This is just the beginning. If you’re working on tokenized real-world assets, synthetic commodities, or exploring gold-backed DeFi, let’s connect — I’d love to collaborate or exchange ideas.
+## Technical Details
+
+- Solidity: ^0.8.13
+- Chainlink Oracles for ETH and Gold prices
+- ERC20 standard (OpenZeppelin)
+- Foundry development and test framework
+
+
+## Collateralization Logic
+
+- Collateral: ETH
+- Minted Token: sGOLD (pegged to Gold price in USD)
+- Minimum Health Factor: 1.0
+- Liquidation Threshold: 50%
+- Pricing Oracles: Chainlink
+
+
